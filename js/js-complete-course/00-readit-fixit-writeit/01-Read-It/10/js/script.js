@@ -25,4 +25,7 @@ const createList = movies => {
     </ol>`;
 };
 
+
 document.write(createList(movies));
+console.log(movies);
+

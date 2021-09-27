@@ -4,3 +4,6 @@
 * Do you notice a difference between the 2 document.write lines?
 * Look at the 'Template literals' documentation
 
+1. this page has a variable amoount
+  
+2. second line use Template literals ${amount / 2}

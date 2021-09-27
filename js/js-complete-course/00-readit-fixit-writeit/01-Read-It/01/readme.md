@@ -2,3 +2,6 @@
 ## EX 01
 * Open index.html in your browser, how is the text displayed on the page?
 * Look up the documentation for this function (hint: mdn)
+
+1. the text is displayed in the center of the page
+2. document.write

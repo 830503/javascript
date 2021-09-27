@@ -66,4 +66,4 @@ const createList = movies => {
 
 console.table(movies);
 document.write(createList(movies));
-console.table(movies);
+
