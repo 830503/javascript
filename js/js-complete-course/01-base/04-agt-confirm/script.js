@@ -10,7 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    var name = prompt("Name: ", "");
+    var age = prompt("Aage: ", "");
+    var adress = prompt("Adress:", "");
+    if (name == null || age == null || adress == null ){
+        text ="User cancelled."; 
+    } else{
+        confirm("My name is " + name + ". " + "I'am " + age + ". " + "I live in " + adress + ". ");
+    }
+   
+   
 })();

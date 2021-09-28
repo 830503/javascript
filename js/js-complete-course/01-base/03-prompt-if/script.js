@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
-  // your code here
+  let text;
+  let person = prompt("Would you like some cake?", "");
+  if (person == "Yes" || person == "yes"){
+      text = "Congratulate!";
+  } else{
+    text = "More cake for me then :p !";
+  }
+  document.getElementById("demo").innerHTML = text;
 
 })();

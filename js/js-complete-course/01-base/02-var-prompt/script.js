@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    let text;
+    let person = prompt("Please enter your name:", "");
+    if (person == null || person ==""){
+        text ="User cancelled the prompt.";
+    } else{
+        text = "Hello, " + person + "!";
+    }
+        document.getElementById("demo").innerHTML = text;
 
 })();
