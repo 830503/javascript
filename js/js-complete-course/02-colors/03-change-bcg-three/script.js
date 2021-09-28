@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+document.getElementById('run').addEventListener('click', function(){
+    var r = Math.floor((Math.random() * 256));
+    var g = Math.floor((Math.random() * 256));
+    var b = Math.floor((Math.random() * 256));
+    console.log(r,g,b);
+    var color = 'rgb' + '('+r+', '+g+', '+b+')';
+    console.log(color);
+    document.body.style.backgroundColor = color;
 
-    // your code here
+})
 
 })();
