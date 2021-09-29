@@ -11,9 +11,27 @@
 
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
+    
 
     var performOperation = function(operation) {
-        // perform the operation
+        var a = document.getElementById('op-one').value;
+        var b = document.getElementById('op-two').value;
+       switch(operation){
+           case 'addition' :
+              var result = Number(a) + Number(b);
+               break;
+            case 'substraction' :
+               var result = Number(a) - Number(b);
+                break;
+            case 'multiplication' :
+               var result = Number(a) * Number(b);
+                break;
+            case 'division':
+               var result = Number(a) / Number(b);
+                break;
+                
+       }
+       alert(result);
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {

@@ -15,8 +15,20 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+       var input = document.getElementById('number').value;
+
+          if (input < 0){
+               alert("error");
+        
+       } else if (input == 0 || input == 1){
+           alert(1);
+       } else {
+           var ret = input * factorialize(input - 1);
+           alert(ret);
+       }
+
 
     });
 
 })();
+
