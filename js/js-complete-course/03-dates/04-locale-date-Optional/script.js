@@ -12,9 +12,19 @@
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric'
+    }
+    var date = new Date();
+
 
    document.getElementById('target').addEventListener('click', function(){
-    
+        document.getElementById('target').innerHTML = date.toLocaleDateString('en-GB', options);
 
    })
 
