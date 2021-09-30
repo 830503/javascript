@@ -26,6 +26,12 @@
         "cherry",
     ];
 
-    // your code here
+  document.getElementById('run').addEventListener('click', function(){
+    var newfruit = "apple";
+    fruits.includes(newfruit) === false ? fruits.push(newfruit) : console.log("Apple already exist.");
+    console.log(fruits);
+//can use "indexOf(newfruit) === -1 ? " to replace .include...
+
+  })
 
 })();
