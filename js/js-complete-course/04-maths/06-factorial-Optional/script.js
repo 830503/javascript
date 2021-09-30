@@ -12,8 +12,8 @@
 (function() {
     
     // to get the value of an input: document.getElementById("element-id").value
-
-    function factorialize(input){
+    //use if function
+    /*function factorialize(input){
         if(input < 0){
             return -1;
         } else if (input == 1 ){
@@ -21,8 +21,30 @@
         } else {
             return (input * factorialize(input - 1));
         }
-    };
+    };*/
     
+    //using while loop
+    /*    function factorialize(input){
+        var result = input;
+        if(input == 0 || input == 1){
+            return 1;
+        }  while (input > 1){
+            input--;
+            result *= input;
+        }
+        return result;
+    } */
+
+    //using for loop
+    function factorialize(input){
+        if (input == 0 || input ==1){
+            return 1;
+        } for(let i = input -1; i > 1; i--){
+            input *= i;
+        }
+        return input;
+    }
+
     document.getElementById("run").addEventListener("click", function() {
 
        var input = document.getElementById('number').value;
