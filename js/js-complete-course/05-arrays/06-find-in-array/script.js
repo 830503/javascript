@@ -89,6 +89,16 @@
         },
     ];
 
-    // your code here
+   document.getElementById('run').addEventListener('click', function(){
+    //Arrow function
+    //let person = people.find(person => person.lastname === "Dupont" && person.firstname === "Jean");
+   
+    let person = people.find(function(personCheck){
+        return (personCheck.lastname === 'Dupont' && personCheck.firstname === 'Jean');
+    })
+    console.log(person);
+  
+
+   })
 
 })();

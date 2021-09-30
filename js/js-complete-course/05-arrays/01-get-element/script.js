@@ -25,7 +25,9 @@
         "grap",
         "cherry",
     ];
-
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        document.getElementById('run').innerHTML = fruits[3];
+    })
+  
 
 })();

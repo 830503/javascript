@@ -89,6 +89,16 @@
         },
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click',function(){
+
+        //  Arrow
+       // let person = people.filter(ageCheck => ageCheck.age >18);
+         
+       let person = people.filter(function(ageCkeck){
+           return (ageCkeck.age > 18);
+       })  
+            console.log(person);
+
+    })    
 
 })();
