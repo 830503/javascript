@@ -89,6 +89,36 @@
         },
     ];
 
-    // your code here
+   document.getElementById('run').addEventListener('click', function(){
+
+       /* let sum = people.reduce(redu, 0);
+        function redu(previousValue, currentValue){
+          return (previousValue + currentValue.age);
+       }*/
+       
+       //Arrow 
+       // let sum = people.reduce((previousValue, currentValue) => previousValue + currentValue.age, 0);
+
+       //by using .map Arrow
+
+      //let sum = people.map(currentValue => currentValue.age).reduce((previousValue, val) => previousValue + val, 0); 
+
+      //.map
+      let sum = people.map(currentValue => currentValue.age).reduce(redu, 0);
+      function redu(previousValue, val){
+          return previousValue + val;
+      }
+
+
+
+
+       
+        console.log(sum);
+        
+    
+       });
+
+
+
 
 })();
