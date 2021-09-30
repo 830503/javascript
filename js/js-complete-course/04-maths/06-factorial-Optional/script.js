@@ -13,22 +13,24 @@
     
     // to get the value of an input: document.getElementById("element-id").value
 
+    function factorialize(input){
+        if(input < 0){
+            return -1;
+        } else if (input == 1 ){
+            return 1;
+        } else {
+            return (input * factorialize(input - 1));
+        }
+    };
+    
     document.getElementById("run").addEventListener("click", function() {
 
        var input = document.getElementById('number').value;
-
-          if (input < 0){
-               alert("error");
-        
-       } else if (input == 0 || input == 1){
-           alert(1);
-       } else {
-           var ret = input * factorialize(input - 1);
-           alert(ret);
+           document.getElementById('number').value = factorialize(input);
        }
 
-
-    });
+       
+    );
 
 })();
 
