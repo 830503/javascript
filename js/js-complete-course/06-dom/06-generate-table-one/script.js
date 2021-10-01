@@ -23,10 +23,13 @@
         //create row
         var row = document.createElement('tr');
         
-        for (let j = 0; j <1; j++){
+        for (let j = 0; j < 1; j++){
             //creat column
             var cell = document.createElement('td');
-            
+            //add a text node
+            //var cellText = document.createTextNode(i + " * " + j);
+            //cell.appendChild(cellText);
+
             row. appendChild(cell);
         }
         //add row to table body
