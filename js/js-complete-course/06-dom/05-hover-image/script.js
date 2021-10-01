@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    var hov = document.querySelector('.material figure img').getAttribute('data-hover');
+    var origin = document.querySelector('.material figure img').getAttribute('src');
+
+    var img = document.querySelector('.material figure img');
+
+    img. addEventListener('mouseover', function(){
+        img. setAttribute('src', hov);
+    })
+
+    img.addEventListener('mouseout', function(){
+        img.setAttribute('src', origin);
+    })
 
 })();
