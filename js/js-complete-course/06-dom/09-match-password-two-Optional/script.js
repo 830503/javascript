@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
-
+    document.getElementById('run').addEventListener('click', function(){
+        var pw = document.getElementById('pass-one').value;
+        var repw = document.getElementById('pass-two').value;
+    
+        if(pw != repw){
+            document.getElementById('pass-one').classList.add('error');
+            document.getElementById('pass-two').classList.add('error');
+        } else {
+            document.getElementById('pass-one').classList.remove('error');
+            document.getElementById('pass-two').classList.remove('error');
+        }
+    })
 })();
