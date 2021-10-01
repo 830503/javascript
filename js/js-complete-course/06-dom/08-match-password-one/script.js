@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        var pw = document.getElementById('pass-one').value;
+        var repw = document.getElementById('pass-two').value;
+    
+        if(pw != repw){
+            document.getElementById('pass-one').style.borderColor = 'red';
+            document.getElementById('pass-two').style.borderColor = 'red';
+        } else {
+            document.getElementById('pass-one').style.borderColor = 'green';
+            document.getElementById('pass-two').style.borderColor = 'green';
+        }
 
+
+
+
+
+    })
 })();
