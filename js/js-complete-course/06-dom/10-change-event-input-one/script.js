@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    var pw = document.getElementById('pass-one');
+        pw.setAttribute('maxlength', 10);
+    
+    var counter = document.getElementById('counter');
+    pw.addEventListener('keyup', function(){
+        counter.innerHTML = pw.ariaValueMax.length + "/10";
+
+    })
 
 })();
