@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    async function getAPI(){
+        let data = await fetch("http://localhost:3000/heroes");
+        let main  = await data.json();
+        console.log(main);
+    }
+
+   getAPI();
 })();
