@@ -13,8 +13,6 @@
 
     document.getElementById('pass-one').addEventListener('keyup', function(){
         var pwinput = document.getElementById('pass-one').value;
-        var loweCaseLetter = /[a-z]/g;
-        var uperCaseLetter = /[A-Z]/g;
         var num = /[0-9]/g;
         var mynum = pwinput.match(num);
         if(pwinput.length < 8 || mynum.length < 2){
