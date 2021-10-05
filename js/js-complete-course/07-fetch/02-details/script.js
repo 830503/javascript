@@ -10,5 +10,38 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+ 
+    
+    document.getElementById('run').addEventListener('click', function(){
+        let id_input = document.getElementById('hero-id').value;  
+        let target = document.getElementById('target');
+        async function getAPI(){
+            let response = await fetch("http://localhost:3000/heroes");
+            let data  = await response.json();
+        for(i = 0; i < data.length; i++){
+            let xman = document.getElementById('tpl-hero').content.cloneNode(true);
+            if(data[i].id == id_input){
+                xman.querySelector('.name').innerHTML = data[i].name;
+                xman.querySelector('em.alter-ego').innerHTML = data[i].alterEgo;
+                xman.querySelector('.powers').innerHTML = data[i].abilities;
+                target.appendChild(xman);
+            }
+        }   
+            
+        
+        }
+
+    getAPI();
+
+    })
+
+
+
+
+    /*fetch("http://localhost:3000/heroes/2")
+        .then(res => res.json())
+        .then(data => console.log(data))*/
+    
+
+
 })();
