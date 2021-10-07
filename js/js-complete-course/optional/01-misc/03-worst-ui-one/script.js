@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    var slidebar = document.getElementById('slider');
+    var output = document.getElementById('target');
+    output.innerHTML = slidebar.value;
+    
+    slidebar.oninput = function(){
+        output.innerHTML = this.value;
+    }
+  
 
 })();
