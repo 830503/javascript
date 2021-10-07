@@ -15,10 +15,19 @@
     document.getElementById('run').addEventListener('click', function(){
     async function getAPI(){
         let response = await fetch('http://localhost:3000/heroes');
-        let data = await response.json(); 
-        let idRemove = document.getElementById('hero-id').value - 1;
-        data.splice(idRemove, 1);
-        console.log(data);
+        let data = await response.json();
+        let idRemove = document.getElementById('hero-id').value;
+        if(idRemove <= data.length && idRemove > 0){
+            const newData = data.splice((idRemove - 1), 1);
+            console.log(data);
+        } else {
+            console.log('error');
+        }
+            
+        
+        
+       
+        
     }
     
         getAPI();

@@ -11,6 +11,25 @@
 
 (function() {
 
-    // your code here
+
+    var txt = document.getElementById('target');
+    var test = txt.innerHTML;
+    txt.innerHTML  = '';
+    console.log(test);
+    var i = 0;
+    var max = 200;
+    var min =0;
+
+    function typeWriter(){
+        if(i < test.length){
+            var speed = Math.floor(Math.random() * (max - min));
+            txt.innerHTML += test.charAt(i)
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+        
+    }
+    typeWriter();
+
 
 })();
