@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    
+    document.getElementById('run').addEventListener('click', function(){
+    async function getAPI(){
+        let response = await fetch('http://localhost:3000/heroes');
+        let data = await response.json(); 
+        let idRemove = document.getElementById('hero-id').value - 1;
+        data.splice(idRemove, 1);
+        console.log(data);
+    }
+    
+        getAPI();
+   })
+
+   
 })();
