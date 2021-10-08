@@ -12,5 +12,8 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        var newObject = Object.fromEntries(keys.map((key, index) => [key, values[index]]));
+        console.log(newObject);
+    })
 })();
